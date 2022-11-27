@@ -8,10 +8,10 @@ FOCAL_LENGTH, CAMERA_CENTER = [IMG_SIZE, IMG_SIZE], [IMG_SIZE/2., IMG_SIZE/2.]
 
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
-import tensorflow.keras.backend as K
-from tensorflow.keras.layers import Input, Flatten, Dense, Lambda, Conv2D, Reshape, MaxPool2D, Average, Dropout, Concatenate, \
+import tensorflow.compat.v1.keras.backend as K
+from tensorflow.compat.v1.keras.layers import Input, Flatten, Dense, Lambda, Conv2D, Reshape, MaxPool2D, Average, Dropout, Concatenate, \
     Add, Maximum, Layer, Activation, Conv1D, TimeDistributed, GlobalAvgPool2D
-from tensorflow.keras import initializers
+from tensorflow.compat.v1.keras import initializers
 
 
 from render.generic_renderer import render_colored_batch, render_shaded_batch, perspective_projection
