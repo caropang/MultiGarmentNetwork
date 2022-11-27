@@ -18,7 +18,7 @@ import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 # tf.enable_eager_execution()
 
-from tensorflow.keras.layers import Layer
+from tensorflow.compat.v1.keras.layers import Layer
 
 try:
     from .batch_lbs import batch_rodrigues, batch_global_rigid_transformation

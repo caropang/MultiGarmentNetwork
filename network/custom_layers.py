@@ -1,15 +1,7 @@
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
-import tensorflow.keras.backend as K
-from tensorflow.keras.layers import Layer, Lambda
-
-import numpy as np
-
-
-import tensorflow as tf
-import tensorflow.keras.backend as K
-from tensorflow.keras.layers import Layer, Lambda
-
+import tensorflow.compat.v1.keras.backend as K
+from tensorflow.compat.v1.keras.layers import Layer, Lambda
 import numpy as np
 
 def NameLayer(name):

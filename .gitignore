@@ -4,3 +4,4 @@ Multi-Garment_dataset
 /assets/neutral_smpl.pkl
 .ipynb_checkpoints
 __pycache__
+.DS_Store
