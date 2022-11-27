@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 from config_ver1 import config, NUM, IMG_SIZE, FACE
 FOCAL_LENGTH, CAMERA_CENTER = [IMG_SIZE, IMG_SIZE], [IMG_SIZE/2., IMG_SIZE/2.]
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import tensorflow.keras.backend as K
 from tensorflow.keras.layers import Input, Flatten, Dense, Lambda, Conv2D, Reshape, MaxPool2D, Average, Dropout, Concatenate, \
     Add, Maximum, Layer, Activation, Conv1D, TimeDistributed, GlobalAvgPool2D
