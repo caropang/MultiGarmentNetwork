@@ -14,7 +14,8 @@ import os
 import numpy as np
 import pickle as pickle
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 # tf.enable_eager_execution()
 
 from tensorflow.keras.layers import Layer

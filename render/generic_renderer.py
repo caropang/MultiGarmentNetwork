@@ -1,7 +1,8 @@
 import sys
 # sys.path.append('/BS/alldieck-3dpeople/work/lib/dirt/')
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 
 from tensorflow.python.framework import ops
