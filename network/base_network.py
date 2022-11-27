@@ -207,9 +207,9 @@ class BaseModel(tf.keras.Model):
         self.model = None
         self.garmentModels = []
         if self.config:
-            self.optimizer = tf.train.AdamOptimizer(learning_rate=self.config.train.lr)
+            self.optimizer = tf.optimizers.Adam(learning_rate=self.config.train.lr)
         else:
-            self.optimizer = tf.train.AdamOptimizer(0.001)
+            self.optimizer = tf.optimizers.Adam(0.001)
         self.vertSpread = pkl.load(open('assets/vert_spread.pkl', "rb"), encoding="latin1")
         self.garmentModels = []
 
