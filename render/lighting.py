@@ -1,7 +1,7 @@
 
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
-from tensorflow.compat.v1.python.framework import ops
+from tensorflow.python.framework import ops
 
 
 def _repeat_1d(tensor, count):

@@ -5,7 +5,7 @@ import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
 
-from tensorflow.compat.v1.python.framework import ops
+from tensorflow.python.framework import ops
 import dirt
 from dirt import matrices
 sys.stderr.write('Using dirt renderer.\n')
