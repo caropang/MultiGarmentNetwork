@@ -241,13 +241,18 @@ class PoseShapeOffsetModel(BaseModel):
         self.latent_code_betas_sz = 128
 
         ##ToDo: Minor: Remove hard coded colors. Should be same as rendered colors in input
+        tf.enable_v2_behavior()
         self.colormap = tf.cast(
-            [np.array([255, 255, 255]), np.array([65, 0, 65]), np.array([0, 65, 65]), np.array([145, 65, 0]),
-             np.array([145, 0, 65]),
-             np.array([0, 145, 65])], tf.float32) / 255.
+            [np.array([255, 255, 255]), 
+            np.array([65, 0, 65]), 
+            np.array([0, 65, 65]),
+            np.array([145, 65, 0]),
+            np.array([145, 0, 65]),
+            np.array([0, 145, 65])], tf.float32) / 255.
         with open('assets/hresMapping.pkl', 'rb') as f:
             _, self.faces = pkl.load(f, encoding="latin1")
         self.faces = np.int32(self.faces)
+        tf.disable_v2_behavior()
 
         ## Define network layers
         self.top_ = SingleImageNet(self.latent_code_garms_sz, self.latent_code_betas_sz)
