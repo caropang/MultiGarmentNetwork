@@ -185,7 +185,7 @@ if __name__ == "__main__":
     # os.environ['CUDA_VISIBLE_DEVICES'] = '0, 1, 2, 3'
     conf = tf.ConfigProto()
     conf.gpu_options.allow_growth = True
-    # tf.enable_eager_execution(config=conf)
+    tf.enable_eager_execution(config=conf)
 
     model_dir = 'saved_model/'
     ## Load model
